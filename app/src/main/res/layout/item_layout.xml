@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="br.com.rosait.myrealm.Item" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horGuidelineItem1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verGuidelineItem1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verGuidelineItem2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.55"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verGuidelineItem3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.70"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verGuidelineItem4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.80"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verGuidelineItem5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.90"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.name}"
+            app:layout_constraintTop_toTopOf="@+id/horGuidelineItem1"
+            app:layout_constraintLeft_toLeftOf="@+id/verGuidelineItem1"
+            tools:text="Item ABC"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.qty}"
+            app:layout_constraintTop_toTopOf="@+id/horGuidelineItem1"
+            app:layout_constraintLeft_toLeftOf="@+id/verGuidelineItem2"
+            tools:text="100"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.isValidItem}"
+            app:layout_constraintTop_toTopOf="@+id/horGuidelineItem1"
+            app:layout_constraintLeft_toLeftOf="@+id/verGuidelineItem3"
+            tools:text="Sim"/>
+
+        <ImageView
+            android:id="@+id/imvEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/horGuidelineItem1"
+            app:layout_constraintLeft_toLeftOf="@+id/verGuidelineItem4"
+            android:src="@drawable/ic_edit"/>
+
+        <ImageView
+            android:id="@+id/imvDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/horGuidelineItem1"
+            app:layout_constraintLeft_toLeftOf="@+id/verGuidelineItem5"
+            android:src="@drawable/ic_delete" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

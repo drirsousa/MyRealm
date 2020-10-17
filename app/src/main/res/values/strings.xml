@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyRealm</string>
+    <string name="item_name">Nome do Item:</string>
+    <string name="qty">Quantidade:</string>
+    <string name="is_valid">É valido?</string>
+    <string name="save">Salvar</string>
+    <string name="hint_item_name">Digite o nome do Item</string>
+</resources>
